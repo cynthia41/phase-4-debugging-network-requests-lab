@@ -63,11 +63,14 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+  After trying to submit a new toy the server responded with an error which was as a result of a typo in the create method so i changed the name in the toys_controller.rb in the create method from Toys.create to Toy.create after that it became a success.
 
 - Update the number of likes for a toy
 
   - How I debugged:
+  after trying to submit a like for a toy the server returned an error uncaught syntax error: unexpected end of json meaning they are unable to update likes on the frontend so i rendered json on the update method in the toys_controller.rb render json: toys, status: :accepted
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  After clicking the donate to Goodwill button the server returned an error Delete 404 (Not Found) meaning there was no route to support the destroy method in the controllers so i added a destroy route in the routes.rb file 
